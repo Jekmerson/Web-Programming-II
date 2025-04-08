@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Anggota;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Anggota::create([
+            'nama' => 'Sopian Aji',
+            'hp' => '085123456781'
+        ]);
+        Anggota::create([
+            'nama' => 'Husni Faqih',
+            'hp' => '088754965473'
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Anggota::create([
+            'nama' => 'Rousyati',
+            'hp' => '083754754873'
         ]);
     }
 }

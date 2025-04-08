@@ -12,6 +12,6 @@ class HelloWorldController extends Controller
     } 
     public function ambilFile()
     {
-        return view('biodata');
+        return view('file');
     }
 } 
