@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\Htmlcontroller;
 use App\Http\Controllers\LatihanController;
@@ -14,6 +15,12 @@ Route::get('/hello', function () {
 Route::get('/biodata', function () {
     return view('biodata');
 });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('anggota' , AnggotaController::class);
 
 Route::get('file',[HelloWorldController::class, 'ambilFile']);
 Route::get('lorem', [Htmlcontroller::class, 'getLorem']);
